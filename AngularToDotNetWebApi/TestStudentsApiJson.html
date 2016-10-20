@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="StuMod">
+<head>
+	<title></title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<script src="http://code.jquery.com/jquery-3.1.0.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js" type="text/javascript"></script>
+	<script src="js/angular-stumod-module.js" type="text/javascript"></script>
+	<script src="js/angular-stuctrl-controller.js" type="text/javascript"></script>
+	<script src="js/angular-stusvc-service.js" type="text/javascript"></script>
+	<script src="js/jquery.js" type="text/javascript"></script>
+</head>
+<body ng-controller="StuCtrl as ctrl">
+	<h1 ng-bind="ctrl.about"></h1>
+	<table class="table">
+		<thead>
+			<th>Name</th>
+			<th>Sat</th>
+			<th>Gpa</th>
+		</thead>
+		<tbody  ng-repeat="student in ctrl.students">
+			<tr>
+				<td ng-bind="student.Name"></td>
+				<td ng-bind="student.Sat"></td>
+				<td ng-bind="student.Gpa"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
